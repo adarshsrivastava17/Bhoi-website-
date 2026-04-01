@@ -1,7 +1,12 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaHeart, FaHandsHelping, FaBuilding, FaCheckCircle, FaShieldAlt, FaWhatsapp } from 'react-icons/fa';
+import { QRCodeSVG } from 'qrcode.react';
 import { useLanguage } from '../context/LanguageContext';
+
+const UPI_ID = '9970978463-2@okbizaxis';
+const UPI_NAME = 'Bhoi Samaj Ashray Sanstha';
+const UPI_LINK = `upi://pay?pa=${UPI_ID}&pn=${encodeURIComponent(UPI_NAME)}&cu=INR`;
 
 const WHATSAPP_NUMBER = '919970978463';
 
@@ -60,16 +65,21 @@ export default function GetInvolved() {
               <p className="text-primary-600 text-lg mb-6 leading-relaxed">{t.getInvolved.donate.desc}</p>
 
               {/* QR Code Card */}
-              <div className="bg-gradient-to-br from-primary-50 to-accent-50 rounded-2xl p-6 border border-primary-100 mb-6">
-                <h3 className="text-lg font-bold text-primary-900 mb-4 text-center">Scan & Pay via UPI</h3>
-                <div className="flex justify-center mb-4">
-                  <img
-                    src="/images/qr-code.png"
-                    alt="Scan to Donate via UPI"
-                    className="w-64 h-auto rounded-xl shadow-md"
-                  />
+              <div className="bg-white rounded-2xl p-8 border border-primary-100 shadow-md mb-6">
+                <h3 className="text-lg font-bold text-primary-900 mb-5 text-center">Scan & Pay via UPI</h3>
+                <div className="flex justify-center mb-5">
+                  <div className="p-4 bg-white rounded-2xl border-2 border-primary-100 shadow-sm">
+                    <QRCodeSVG
+                      value={UPI_LINK}
+                      size={220}
+                      level="H"
+                      includeMargin={true}
+                      bgColor="#ffffff"
+                      fgColor="#102a43"
+                    />
+                  </div>
                 </div>
-                <p className="text-center text-sm text-primary-600 font-medium">UPI ID: 9970978463-2@okbizaxis</p>
+                <p className="text-center text-sm text-primary-800 font-semibold">UPI ID: {UPI_ID}</p>
                 <p className="text-center text-xs text-primary-400 mt-1">Supports Google Pay, PhonePe, Paytm, BHIM & more</p>
               </div>
 
