@@ -6,6 +6,7 @@ const en = {
     services: 'Services',
     facilities: 'Facilities',
     programs: 'Programs',
+    gallery: 'Gallery',
     getInvolved: 'Get Involved',
     contact: 'Contact',
     donate: 'Donate Now',

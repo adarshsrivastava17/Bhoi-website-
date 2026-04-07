@@ -6,6 +6,7 @@ const mr = {
     services: 'सेवा',
     facilities: 'सुविधा',
     programs: 'कार्यक्रम',
+    gallery: 'गॅलरी',
     getInvolved: 'सहभागी व्हा',
     contact: 'संपर्क',
     donate: 'देणगी द्या',

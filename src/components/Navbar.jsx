@@ -10,6 +10,7 @@ const navLinks = [
   { path: '/services', key: 'services' },
   { path: '/facilities', key: 'facilities' },
   { path: '/programs', key: 'programs' },
+  { path: '/gallery', key: 'gallery' },
   { path: '/get-involved', key: 'getInvolved' },
   { path: '/contact', key: 'contact' },
 ];
